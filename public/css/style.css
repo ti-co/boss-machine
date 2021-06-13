@@ -116,7 +116,6 @@ a {
 
 #meetings-table {
   height: 95%;
-  overflow-y: scroll;
 }
 
 /* Landing page media queries */
