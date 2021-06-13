@@ -8,9 +8,9 @@
   "main": "server.js",
   "scripts": {
     "test": "cross-env PORT=8000 mocha --watch", 
-    "heroku-postbuild": "webpack -p", // runs after installation
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "start": "nodemon --watch server.js --watch server/",
+    "start": "node server.js", 
+    "heroku-postbuild": "webpack -p", 
     "postinstall": "webpack"
   },
   "author": "Codecademy",
