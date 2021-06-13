@@ -176,10 +176,6 @@ a {
 
 /* Tables */
 
-table {
-  overflow: scroll;
-}
-
 thead {
   font-size: 12.6px;
   letter-spacing: 0.9px;

@@ -1,6 +1,9 @@
 {
   "name": "build-apis-boss-machine",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.1.0"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
