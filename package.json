@@ -1,6 +1,5 @@
 {
   "name": "build-apis-boss-machine",
-  "homepage": "http://fierce-plateau-61680.herokuapp.com/",
   "version": "1.0.0",
   "engines": {
     "node": "16.1.0"
