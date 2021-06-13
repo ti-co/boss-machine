@@ -10,11 +10,9 @@
   "scripts": {
     "test": "cross-env PORT=8000 mocha --watch",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "start": "nodemon --watch server.js --watch server/",
+    "start": "node server/server.js",
     "heroku-postbuild": "webpack -p",
     "postinstall": "webpack", 
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "author": "Codecademy",
   "license": "ISC",
