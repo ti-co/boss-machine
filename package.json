@@ -10,7 +10,8 @@
     "test": "cross-env PORT=8000 mocha --watch",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
     "start": "nodemon --watch server.js --watch server/",
-    "postinstall": "webpack"
+    "postinstall": "webpack", 
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Codecademy",
   "license": "ISC",
