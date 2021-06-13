@@ -10,7 +10,7 @@
   "scripts": {
     "test": "cross-env PORT=8000 mocha --watch",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "start": "node server/server.js",
+    "start": "node server.js",
     "heroku-postbuild": "webpack -p",
     "postinstall": "webpack", 
   },
