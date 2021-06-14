@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "homepage": "https://fierce-plateau-61680.herokuapp.com/",
   "engines": {
-    "node": "16.1.0"
+    "node": "16.1.0", 
+    "npm": "7.13.0"
   },
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "cross-env PORT=8000 mocha --watch",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "start": "node backend/server.js",
+    "start": "node server.js",
     "postinstall": "webpack", 
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix browser && npm run build --prefix browser",
     "proxy": "http://localhost:4001"
