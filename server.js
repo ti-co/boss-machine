@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'browser/build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
 
@@ -29,14 +29,11 @@ app.use(bodyParser.json())
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
-if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'browser/build')))};
+if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'public')))};
 
 app.get('*', (req, res) => { res.sendFile(path.join(__dirname+'/public/index.html'))})
 
-// This conditional is here for testing purposes:
-if (!module.parent) { 
-  // Add your code to start the server listening at PORT below:
-  app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-  });
-};
+// Add your code to start the server listening at PORT below:
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
