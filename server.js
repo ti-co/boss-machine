@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'browser/build')));
 
 module.exports = app;
 
@@ -28,6 +29,9 @@ app.use(bodyParser.json())
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
+if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'browser/build')));
+
+app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/public/index.html'));})
 
 // This conditional is here for testing purposes:
 if (!module.parent) { 
