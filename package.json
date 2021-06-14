@@ -12,7 +12,8 @@
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
     "start": "nodemon --watch server.js --watch server/",
     "postinstall": "webpack", 
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix browser && npm run build --prefix browser"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix browser && npm run build --prefix browser",
+    "proxy": "http://localhost:4001"
   },
   "author": "Codecademy",
   "license": "ISC",
