@@ -14,7 +14,7 @@
     "start": "node server.js",
     "postinstall": "webpack", 
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix browser && npm run build --prefix browser",
-    "proxy": "http://localhost:4001"
+    "proxy": "https://fierce-plateau-61680.herokuapp.com/"
   },
   "author": "Codecademy",
   "license": "ISC",
