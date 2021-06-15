@@ -19,7 +19,7 @@
     "postinstall": "webpack",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix browser && npm run build --prefix browser",
     "proxy": "http://localhost:4001", 
-    "build":  "webpack --config webpack.conf.js"  
+    "build":  "webpack --config webpack.config.js"  
   },
   "author": "Codecademy",
   "license": "ISC",
