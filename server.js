@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-module.exports = app;
+app.use(express.static(path.join(__dirname, 'public')));
 
 /* Do not change the following line! It is required for testing and allowing
 *  the frontend application to interact as planned with the api server
@@ -27,9 +27,9 @@ app.use(bodyParser.json())
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Add your code to start the server listening at PORT below:
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+module.exports = app;
