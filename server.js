@@ -29,13 +29,6 @@ app.use('/api', apiRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-if(process.env.NODE_ENV === 'production') {
-  // set static folder
-  app.use(express.static('public'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
-  });
-}
 // Add your code to start the server listening at PORT below:
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
