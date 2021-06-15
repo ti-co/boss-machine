@@ -11,13 +11,13 @@
   "scripts": {
     "test": "cross-env PORT=8000 mocha --watch",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "client-install": "npm install --prefix browser",
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix browser",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run browser\"",
     "postinstall": "webpack",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix browser && npm run build --prefix browser",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client",
     "proxy": "http://localhost:4001", 
     "build":  "webpack --config webpack.config.js"  
   },
