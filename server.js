@@ -27,13 +27,13 @@ app.use(bodyParser.json())
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 if(process.env.NODE_ENV === 'production') {
   // set static folder
-  app.use(express.static('client/build'));
+  app.use(express.static('public'));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
 }
 // Add your code to start the server listening at PORT below:

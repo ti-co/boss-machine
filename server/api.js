@@ -9,6 +9,6 @@ apiRouter.use('/minions', minionsRouter);
 apiRouter.use('/ideas', ideasRouter);
 apiRouter.use('/meetings', meetingsRouter);
 
-apiRouter.use(express.static('client/build'));
+apiRouter.use(express.static('public'));
 
 module.exports = apiRouter;
