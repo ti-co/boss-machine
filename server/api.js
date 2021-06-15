@@ -1,7 +1,7 @@
 const express = require('express');
 const apiRouter = express.Router();
 
-apiRouter.use(express.static('public'));
+apiRouter.use(express.static('client/build'));
 
 const minionsRouter = require('./minions');
 const ideasRouter = require('./ideas');
