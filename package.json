@@ -1,7 +1,7 @@
 {
   "name": "build-apis-boss-machine",
   "version": "1.0.0",
-  "homepage": "https://fierce-plateau-61680.herokuapp.com/",
+  
   "engines": {
     "node": "16.1.0",
     "npm": "7.13.0"
@@ -15,7 +15,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run build\"",
     "postinstall": "webpack",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client",
     "proxy": "http://localhost:4001" 
