@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'client/build')));
-
 module.exports = app;
 
 /* Do not change the following line! It is required for testing and allowing
@@ -28,6 +26,8 @@ app.use(bodyParser.json())
 // Mount your existing apiRouter below at the '/api' path.
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
+
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 if(process.env.NODE_ENV === 'production') {
   // set static folder
